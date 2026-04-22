@@ -1,6 +1,7 @@
 import { useLocation } from 'react-router-dom';
 import { motion } from 'motion/react';
-import { Info, Terminal, ChevronRight } from 'lucide-react';
+import { Info, Terminal, ChevronRight, Share2 } from 'lucide-react';
+import { REDIRECT_URIS } from '../constants';
 
 export default function UberCallback() {
   const location = useLocation();
@@ -24,24 +25,37 @@ export default function UberCallback() {
             <Terminal size={120} />
           </div>
 
-          <div className="flex items-center gap-3 text-teal-400 mb-6">
+          <div className="flex items-center gap-3 text-brand-green mb-6">
             <Info size={20} />
             <span className="text-xs font-bold uppercase tracking-widest">Debug Console</span>
           </div>
 
           <h1 className="text-3xl font-bold mb-4">Uber OAuth Callback</h1>
           <p className="text-slate-400 mb-10 text-lg">
-            This is a temporary callback test page for Farely OAuth setup. Use this page to verify that your redirection parameters are being passed correctly.
+            This is a temporary callback test page for Farely OAuth setup. Verify your parameters below.
           </p>
 
           <div className="space-y-4">
+            <div className="text-xs font-bold text-slate-600 uppercase tracking-widest mb-2 flex items-center gap-2">
+              <Share2 size={14} /> Registered Redirects
+            </div>
+            {Object.entries(REDIRECT_URIS).map(([key, value]) => (
+              <div key={key} className="bg-slate-900/50 border border-slate-800/50 rounded-xl p-3 flex flex-col gap-1">
+                <span className="text-[10px] font-bold text-slate-500 uppercase">{key.replace(/_/g, ' ')}</span>
+                <code className="text-xs text-slate-400 truncate">{value}</code>
+              </div>
+            ))}
+
+            <div className="pt-6 text-xs font-bold text-slate-600 uppercase tracking-widest mb-2">
+              Incoming Parameters
+            </div>
             {Object.entries(params).map(([key, value]) => (
               <div key={key} className="bg-slate-900 border border-slate-800 rounded-2xl p-4 flex flex-col md:flex-row md:items-center justify-between gap-2">
                 <div className="flex items-center gap-2">
-                  <ChevronRight size={16} className="text-indigo-500" />
+                  <ChevronRight size={16} className="text-brand-green" />
                   <span className="text-sm font-bold text-slate-500 uppercase tracking-wider">{key}</span>
                 </div>
-                <code className={`text-sm break-all ${value === 'None provided' || value === 'None detecting' ? 'text-slate-600' : 'text-indigo-400'}`}>
+                <code className={`text-sm break-all ${value === 'None provided' || value === 'None detecting' ? 'text-slate-600' : 'text-brand-green'}`}>
                   {value}
                 </code>
               </div>

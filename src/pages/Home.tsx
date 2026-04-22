@@ -167,7 +167,7 @@ export default function Home() {
                   const el = document.getElementById('download');
                   if (el) el.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="bg-white text-indigo-600 px-10 py-5 rounded-2xl font-extrabold hover:bg-slate-50 transition-all flex items-center gap-3 shadow-xl active:scale-95"
+                className="bg-white text-brand-green px-10 py-5 rounded-2xl font-extrabold hover:bg-slate-50 transition-all flex items-center gap-3 shadow-xl active:scale-95"
               >
                 Learn More <ArrowRight size={24} />
               </button>
