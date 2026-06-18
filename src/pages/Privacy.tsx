@@ -17,7 +17,7 @@ export default function Privacy() {
     {
       title: "3. Third-Party Providers",
       icon: Shield,
-      content: "When you comparison shop, your search parameters are shared with our supported partners (Uber, Yango, Bykea, etc.) to fetch estimates. When you select a ride, you are redirected to the partner app, and their respective privacy policies apply to any data shared thereafter."
+      content: "When you comparison shop, your search parameters are shared with our supported partners (Yango and Bykea) to fetch estimates. When you select a ride, you are redirected to the partner app, and their respective privacy policies apply to any data shared thereafter."
     },
     {
       title: "4. Data Retention",

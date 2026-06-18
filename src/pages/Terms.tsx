@@ -7,17 +7,17 @@ export default function Terms() {
     {
       title: "1. Service Scope",
       icon: Scale,
-      content: "Farely provides a comparison interface for ride-sharing fares and arrival times. We do not provide transportation services ourselves. Our service is limited to aggregating and displaying third-party data for informational purposes."
+      content: "Farely provides a comparison interface for ride-sharing fares. We do not provide transportation services ourselves. Our service is limited to aggregating and displaying third-party data for informational purposes."
     },
     {
       title: "2. Estimate Disclaimer",
       icon: AlertCircle,
-      content: "All fare estimates and arrival times displayed on Farely are provided 'as-is' by third-party services. Farely does not guarantee the accuracy of these estimates. Real-world conditions such as traffic, weather, and surge pricing may result in final charges that differ from the estimate."
+      content: "All fare estimates displayed on Farely are provided 'as-is' by third-party services. Farely does not guarantee the accuracy of these estimates. Real-world conditions such as traffic, weather, and surge pricing may result in final charges that differ from the estimate."
     },
     {
       title: "3. Provider Responsibility",
       icon: Gavel,
-      content: "Any ride booked after using Farely is a contract between you and the respective ride-sharing provider (e.g., Uber, Yango, or Bykea). Farely is not responsible for the safety, quality, or legality of the rides, nor for any disputes arising from the ride service."
+      content: "Any ride booked after using Farely is a contract between you and the respective ride-sharing provider (Yango or Bykea). Farely is not responsible for the safety, quality, or legality of the rides, nor for any disputes arising from the ride service."
     },
     {
       title: "4. User Obligations",

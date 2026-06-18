@@ -78,7 +78,7 @@ export default function Support() {
           <div className="space-y-6 relative z-10">
             <div className="flex gap-4">
               <div className="w-8 h-8 rounded-full bg-brand-green flex items-center justify-center font-bold text-sm shrink-0">1</div>
-              <p className="text-slate-400">Open the app you used to book the ride (e.g., Uber, Bykea, Yango).</p>
+              <p className="text-slate-400">Open the app you used to book the ride (Yango or Bykea).</p>
             </div>
             <div className="flex gap-4">
               <div className="w-8 h-8 rounded-full bg-brand-green flex items-center justify-center font-bold text-sm shrink-0">2</div>

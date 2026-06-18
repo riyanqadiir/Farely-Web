@@ -4,7 +4,6 @@ import Home from './pages/Home';
 import Support from './pages/Support';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
-import UberCallback from './pages/UberCallback';
 
 export default function App() {
   return (
@@ -15,7 +14,6 @@ export default function App() {
           <Route path="/support" element={<Support />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
-          <Route path="/auth/uber/callback" element={<UberCallback />} />
         </Routes>
       </Layout>
     </Router>

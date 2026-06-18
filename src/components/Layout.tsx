@@ -1,8 +1,8 @@
 import { motion, AnimatePresence } from 'motion/react';
-import { Menu, X, Smartphone, Globe, Shield, MapPin, Mail, ChevronRight } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { LEGAL_ENTITY_NAME } from '../constants';
+import { FarelyLogo } from './FarelyLogo';
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,9 +18,7 @@ export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-slate-100 px-6 md:px-12 py-4 md:py-6 flex items-center justify-between">
       <Link to="/" className="flex items-center gap-3 group">
-        <div className="w-10 h-10 bg-brand-green rounded-xl flex items-center justify-center transition-transform group-hover:rotate-6 shadow-lg shadow-brand-green/20">
-          <span className="text-white font-display font-extrabold text-xl">F</span>
-        </div>
+        <FarelyLogo size={40} showShadow className="transition-transform group-hover:rotate-6" />
         <span className="text-2xl font-display font-extrabold tracking-tight text-slate-900 group-hover:text-brand-green transition-colors">Farely</span>
       </Link>
 

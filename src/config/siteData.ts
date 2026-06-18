@@ -4,9 +4,9 @@ export const SITE_DATA = {
   hero: {
     tag: "Ride Comparison App Pakistan",
     title: "Compare ride fares in one app.",
-    subtitle: "Farely helps you quickly check estimated fares from Uber, Yango, and Bykea so you can ride smarter in Pakistan.",
+    subtitle: "Farely helps you quickly check estimated fares from Yango and Bykea so you can ride smarter in Pakistan.",
   },
-  providers: ["Uber", "Yango", "Bykea"],
+  providers: ["Yango", "Bykea"],
   howItWorks: [
     {
       title: "Enter pickup and dropoff",
@@ -14,8 +14,8 @@ export const SITE_DATA = {
       icon: Search,
     },
     {
-      title: "Compare price + ETA",
-      desc: "See real-time estimates from all major providers in a single list.",
+      title: "Compare fares",
+      desc: "See real-time fare estimates from all major providers in a single list.",
       icon: ListChecks,
     },
     {
@@ -33,11 +33,11 @@ export const SITE_DATA = {
   faqs: [
     {
       q: "Is Farely a ride-sharing service?",
-      a: "No, Farely is a comparison tool. We provide fare estimates and ETAs from various providers, but the actual ride is booked and fulfilled by the respective provider app."
+      a: "No, Farely is a comparison tool. We provide fare estimates from various providers, but the actual ride is booked and fulfilled by the respective provider app."
     },
     {
       q: "Which providers are supported in Pakistan?",
-      a: "Currently, we support Uber, Yango, and Bykea. We are constantly working to add more local providers to our platform."
+      a: "Currently, we support Yango and Bykea. We are constantly working to add more local providers to our platform."
     },
     {
       q: "Is the fare estimate guaranteed?",

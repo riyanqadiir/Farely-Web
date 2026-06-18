@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { ArrowRight, CheckCircle2, Download, Smartphone } from 'lucide-react';
-import { APP_STORE_URL, PLAY_STORE_URL } from '../constants';
+import { ArrowRight, CheckCircle2, Smartphone } from 'lucide-react';
 import { SITE_DATA } from '../config/siteData';
 import { FAQItem } from '../components/FAQItem';
 import { FeatureCard } from '../components/FeatureCard';
 import { PhoneMockup } from '../components/PhoneMockup';
+import { AppStoreButton, GooglePlayButton } from '../components/StoreButtons';
 
 export default function Home() {
   const fadeInUp = {
@@ -39,26 +39,8 @@ export default function Home() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-16">
-                <a
-                  href={APP_STORE_URL}
-                  className="bg-brand-green text-white px-8 py-4 rounded-xl flex items-center justify-center gap-3 transition-all hover:opacity-90 hover:-translate-y-1 active:scale-95 shadow-lg shadow-green-200"
-                >
-                  <div className="w-5 h-5 border-2 border-white rounded-sm"></div>
-                  <div className="text-left">
-                    <div className="text-[9px] font-medium opacity-70 leading-none uppercase">Available on</div>
-                    <div className="text-sm font-bold leading-none mt-1">App Store</div>
-                  </div>
-                </a>
-                <a
-                  href={PLAY_STORE_URL}
-                  className="bg-slate-900 text-white px-8 py-4 rounded-xl flex items-center justify-center gap-3 transition-all hover:bg-slate-800 hover:-translate-y-1 active:scale-95 shadow-lg"
-                >
-                  <div className="w-5 h-5 bg-white opacity-30 rounded-full"></div>
-                  <div className="text-left">
-                    <div className="text-[9px] font-medium opacity-70 leading-none uppercase">Get it on</div>
-                    <div className="text-sm font-bold leading-none mt-1">Google Play</div>
-                  </div>
-                </a>
+                <AppStoreButton variant="hero" />
+                <GooglePlayButton variant="hero" />
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 border-t border-slate-200 pt-12">
@@ -68,7 +50,7 @@ export default function Home() {
                 </div>
                 <div className="space-y-1">
                   <h3 className="font-bold text-slate-900 text-lg">Real-time</h3>
-                  <p className="text-sm text-slate-500">Live estimates for price and ETA instantly.</p>
+                  <p className="text-sm text-slate-500">Live fare estimates instantly.</p>
                 </div>
                 <div className="space-y-1">
                   <h3 className="font-bold text-slate-900 text-lg">Transparent</h3>
@@ -153,7 +135,7 @@ export default function Home() {
                   <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center">
                     <CheckCircle2 size={16} className="text-teal-300" />
                   </div>
-                  <span className="font-bold text-lg">Accurate ETA estimates</span>
+                  <span className="font-bold text-lg">Side-by-side fare comparisons</span>
                 </li>
                 <li className="flex items-center gap-4 group">
                   <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center">
@@ -225,20 +207,8 @@ export default function Home() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <a href={APP_STORE_URL} className="bg-black text-white px-8 py-4 rounded-2xl flex items-center gap-3 transition-transform hover:scale-105">
-                  <Download size={24} />
-                  <div className="text-left">
-                    <div className="text-[10px] uppercase font-bold opacity-70 leading-none">Available on</div>
-                    <div className="text-xl font-bold leading-none mt-1">App Store</div>
-                  </div>
-                </a>
-                <a href={PLAY_STORE_URL} className="bg-white border border-green-100 text-brand-green px-8 py-4 rounded-2xl flex items-center gap-3 transition-transform hover:scale-105">
-                  <Smartphone size={24} />
-                  <div className="text-left">
-                    <div className="text-[10px] uppercase font-bold opacity-70 leading-none">Get it on</div>
-                    <div className="text-xl font-bold leading-none mt-1">Google Play</div>
-                  </div>
-                </a>
+                <AppStoreButton variant="download" />
+                <GooglePlayButton variant="download" />
               </div>
 
               <div className="flex items-center gap-3 text-green-900/60 text-sm font-bold">
@@ -276,12 +246,8 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10 text-center">
             <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-8">Simplify your city travel today.</h2>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <a href={APP_STORE_URL} className="bg-white text-brand-green px-10 py-5 rounded-full font-extrabold shadow-xl hover:bg-slate-50 transition-colors uppercase text-sm tracking-widest">
-                Download on App Store
-              </a>
-              <a href={PLAY_STORE_URL} className="bg-slate-900 text-white px-10 py-5 rounded-full font-extrabold shadow-xl hover:bg-slate-800 transition-colors uppercase text-sm tracking-widest">
-                Get it on Google Play
-              </a>
+              <AppStoreButton variant="banner" />
+              <GooglePlayButton variant="banner" />
             </div>
         </div>
       </section>

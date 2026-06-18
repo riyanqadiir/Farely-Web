@@ -1,5 +1,6 @@
 import React from 'react';
 import { Smartphone } from 'lucide-react';
+import { FarelyLogo } from './FarelyLogo';
 
 export function PhoneMockup() {
   return (
@@ -7,7 +8,9 @@ export function PhoneMockup() {
       <div className="w-full h-full bg-white rounded-[2rem] overflow-hidden flex flex-col">
         <div className="p-6 space-y-4">
           <div className="flex justify-between items-center">
-            <div className="w-10 h-10 bg-brand-green rounded-lg flex items-center justify-center text-white font-bold">F</div>
+            <div className="w-10 h-10 rounded-lg overflow-hidden shrink-0">
+              <FarelyLogo size={40} className="rounded-lg" />
+            </div>
             <div className="w-24 h-4 bg-slate-100 rounded-full" />
           </div>
           <div className="space-y-2">
